@@ -10,7 +10,7 @@ After training the model the results for a new input are going to be predicted (
 This time, of course, there is no variable called 'target' as this is what we want to predict.
 
 A predicted result is not going to be a 0 or a 1 but a number between those two numbers.
-The algorithm will try to change the weights and biases in a way that the output (prediction) gets as close as possible to 0 or 1, therefore giving you a hint on how to categorize the row you wanted the prediction for.
+The algorithm will try to change the weights and biases in a way so that the output (prediction) gets as close as possible to 0 or 1, therefore giving you a hint on how to categorize the row you wanted the prediction for.
 
 # Layers
 This neural network includes 3 layers:
