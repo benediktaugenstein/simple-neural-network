@@ -1,14 +1,17 @@
 import numpy as np
 
-# np.random.seed(0)
+# Can be set to make sure the random weights and biases generated are going to be the same for each time the code runs
+np.random.seed(0)
+
+# suppress scientific notation
 np.set_printoptions(suppress=True)
 
 # input data
-input = np.array([[6, 0.3, 10.0, 0.2],
-     [0.2, 6, 0.2, 5],
-     [7, 0.55, 12, 0.2],
-     [0.2, 10, 0.5, 12],
-     [0.5, 9, 0.6, 7]])
+input = np.array([[0.5, 0.3, 10.0, 0.2],
+                  [0.7, 0.6, 0.25, 0.5],
+                  [0.6, 0.5, 12.0, 0.3],
+                  [0.5, 0.1, 0.5, 0.12],
+                  [0.25, 0.8, 0.6, 0.7]])
 
 # target output
 target = np.array([[1,0,1,0,0]]).T
@@ -39,7 +42,6 @@ class Neural_Network:
         d_weights = (-1) * np.dot(input.T, (np.dot(2 * (layer2.output - target) * sigmoid_derivative(self.output), layer2.weights) * sigmoid_derivative(self.output)))
         d_biases = (-1) * np.sum((self.output - target) * sigmoid_derivative(self.output))
         self.weights += d_weights
-        # d_biases = np.sum(d_weights)
         self.biases += d_biases
 
     def backpropagation_output_layer(self):
@@ -47,19 +49,17 @@ class Neural_Network:
         d_weights = (-1) * np.dot(layer1.output.T, ((self.output - target) * sigmoid_derivative(self.output)))
         d_biases = (-1) * np.sum((self.output - target) * sigmoid_derivative(self.output))
         self.weights += d_weights
-        # d_biases = np.sum(d_weights)
         self.biases += d_biases
 
 # Neural_Network(number of inputs, number of neurons);
-# number of neurons is going to be the number of the output of layer1.
-# The output of layer1 has to be the input for layer2
+# The number of inputs for layer2 to has to be the same as the number of neurons in layer1
 layer1 = Neural_Network(4, 5)
 layer2 = Neural_Network(5, 1)
 
-# calls forward function with X as input
+# calls forward function with the original input as input
 layer1.forward(input)
 
-# calls forward function with layer1 as input
+# calls forward function with the output of layer1 as input
 layer2.forward(layer1.output)
 
 # first try with random weights and biases = 0
@@ -88,13 +88,13 @@ for i in range(5000):
     print(layer2.output)
 
 
-#PREDICTIONS
+# PREDICTIONS
 
 # input to be checked in the end
-input = np.array([[6, 0.4, 10, 0.35],
-                [0.5, 6, 0.2, 7],
-                [0.4, 7, 0.1, 6],
-                [0.5, 10, 0.7, 12]])
+input = np.array([[0.3, 0.4, 11.0, 0.3],
+                  [0.5, 0.35, 0.2, 0.7],
+                  [0.45, 0.7, 9.0, 0.6],
+                  [0.5, 0.1, 0.7, 0.25]])
 
 # forward input (output is going to be calculated with updated weights and biases)
 layer1.forward(input)
