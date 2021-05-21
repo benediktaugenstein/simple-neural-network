@@ -1,4 +1,4 @@
-# Neural Network
+# Neural Network from scratch
 A simple neural network from scratch, built in Python.
 
 # Usage
