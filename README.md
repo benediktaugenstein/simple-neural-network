@@ -22,9 +22,9 @@ This neural network consists of 3 layers:
 
 # Neurons
 The input layer consists of 4 neurons, the hidden layer consists of 5.
-In the output layer there is only going to be one neuron which gives us our final output.
+In the output layer there is only going to be one neuron which gives us our final output (result).
 
 # Weights and biases
-Each layer is connected via weights which are going to be changed automatically during the backpropagation which resembles the learning process of the neural network.
+Each layer is connected via weights which are going to be changed automatically during the backpropagation.
 The same applies for biases which are added to the neural network in the input and hidden layer.
 
