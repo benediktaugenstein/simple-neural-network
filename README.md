@@ -1,7 +1,7 @@
 # Neural Network from scratch
 A simple neural network from scratch, built in Python.
 
-# Usage
+# How it works
 This artificial neural network analyzes an initial input with 4 values per instance (row) in the input dataset.
 Each instance is matched with a result.
 That result can be either a 0 or a 1 and is listed in the variable 'target'. Those target values represent the values which should be predicted in the future for new inputs. First, however, the neural network has to 'learn' how to predict the correct targets for each instance. This can be done by using the backpropagation algorithm.
