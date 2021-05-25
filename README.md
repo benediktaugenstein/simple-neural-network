@@ -4,7 +4,7 @@ A simple neural network from scratch, built in Python.
 # Usage
 This artificial neural network analyzes an initial input with 4 values per instance (row) in the input dataset.
 Each instance is matched with a result.
-That result can be either a 0 or a 1 and is listed in the variable 'target'. Those target values are the values which should be predicted in the future for new inputs. First, however, the neural network has to 'learn' how to predict the correct targets for each instance.
+That result can be either a 0 or a 1 and is listed in the variable 'target'. Those target values represent the values which should be predicted in the future for new inputs. First, however, the neural network has to 'learn' how to predict the correct targets for each instance.
 The backpropagation algorithm will try to change the weights and biases of the network in a way so that the output (prediction) for each instance gets as close as possible to the corresponding target value. This process represents the 'learning' of the artificial neural network.
 
 After training the model, the results for a new input are going to be predicted (the new input can be found near the end of the code). The new input is going to be run through the neural network with the updated weights and biases.
