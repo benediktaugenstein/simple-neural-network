@@ -26,5 +26,5 @@ In the output layer there is only going to be one neuron which gives us our fina
 
 # Weights and biases
 Each layer is connected via weights which are going to be changed automatically during the backpropagation.
-The same applies for biases which are added to the neural network in the input and hidden layer
+The same applies for biases which are added to the neural network in the input and hidden layer.
 
