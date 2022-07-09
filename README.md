@@ -1,4 +1,4 @@
-# Neural Network from scratc
+# Neural Network from scratch
 A simple neural network from scratch, built in Python.
 
 # How it works
